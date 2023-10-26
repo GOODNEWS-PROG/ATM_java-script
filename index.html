@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM</title>
+</head>
+<body>
+  <script>
+   function showMainMenu() {
+  var choice = prompt("Welcome t0 ATM!\n\n" +
+    "Please select an option:\n" +
+    "1. Check Balance\n" +
+    "2. Withdraw Cash\n" +
+    "3. Deposit Cash\n" +
+    "4. Exit");
+
+  switch (choice) {   
+    case "1":
+      
+      alert("Your balance is $2000.");
+      break;
+    case "2":
+      var withdrawalAmount = parseFloat(prompt("Enter withdrawal amount:"));
+      if (withdrawalAmount <= 2000) {
+        alert("Please take your $" + withdrawalAmount);
+      } else {
+        alert("Insufficient funds.");
+      }
+      break;
+    case "3":
+      var depositAmount = parseFloat(prompt("Enter deposit amount:"));
+      alert("Thank you for depositing $" + depositAmount); 
+      break;
+    case "4":
+      alert("Thank you for using our ATM. Goodbye!");
+      break;
+    default:
+      alert("Invalid choice. Please select a valid option.");
+      break;
+  }
+}
+
+   showMainMenu();
+  </script>
+</body>
+</html>
